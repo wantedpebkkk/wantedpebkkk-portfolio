@@ -1,2 +1,2 @@
 # wantedpebkkk portfolio
-Author : wamtedpebkkk
+## Author : wantedpebkkk
