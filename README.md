@@ -2,7 +2,7 @@
 
 A modern, dark/light-mode personal portfolio for **Pebkkk** — Discord Server Manager & Community · Creator Manager.
 
-Built with **Next.js 15 (App Router) + TypeScript + Tailwind CSS + Framer Motion**.
+Built with **Next.js 16 (App Router) + TypeScript + Tailwind CSS + Framer Motion**.
 
 ---
 
