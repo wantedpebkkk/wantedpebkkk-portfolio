@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* ─── CSS custom properties ────────────────────────────────────────────── */
+:root {
+  --accent: #7c3aed;        /* purple-600 */
+  --accent-light: #a78bfa;  /* violet-400 */
+  --accent-glow: rgba(124, 58, 237, 0.25);
+}
+
+/* Light mode */
+:root {
+  --bg: #f4f3ff;
+  --bg-card: #ffffff;
+  --fg: #1a1035;
+  --fg-muted: #5b5470;
+  --border: rgba(124, 58, 237, 0.12);
+}
+
+/* Dark mode */
+.dark {
+  --bg: #0d0b1a;
+  --bg-card: #141126;
+  --fg: #ede9fe;
+  --fg-muted: #9d94c0;
+  --border: rgba(167, 139, 250, 0.12);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* ─── Selection ─────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--accent-glow);
+  color: var(--fg);
+}
+
+/* ─── Gradient mesh / noise overlay ───────────────────────────────────── */
+.bg-mesh {
+  background-image:
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(124,58,237,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(59,130,246,0.12) 0%, transparent 55%);
+}
+
+/* ─── Animated gradient text ───────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 40%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Glow ring ────────────────────────────────────────────────────────── */
+.glow-ring {
+  box-shadow: 0 0 0 1px rgba(124,58,237,0.3), 0 0 20px rgba(124,58,237,0.15);
+}
+.glow-ring:hover {
+  box-shadow: 0 0 0 1px rgba(124,58,237,0.6), 0 0 32px rgba(124,58,237,0.25);
+}
+
+/* ─── Card base ─────────────────────────────────────────────────────────── */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(124,58,237,0.12);
+}
+
+/* ─── Dot-grid overlay ───────────────────────────────────────────────── */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(124,58,237,0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
